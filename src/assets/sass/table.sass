@@ -1,0 +1,56 @@
+$row: #f5f5f5
+$table: #ffffff
+$accent_row: #e4c4f778
+
+
+
+.characteristics-table
+    font-size: 16px
+    border-spacing: 0px
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+    background-color: $table
+    text-align: left
+    p
+        max-height: 300px
+        transition: max-height 0.15s cubic-bezier(0.76, 0.14, 1, 0.67)
+    td, th
+        padding:
+            top: 5px
+            bottom: 5px
+            left: 15px
+            right: 15px
+    tr:nth-child(even)
+        background-color: $row
+
+    &__header
+        background-color: $row
+
+    &__accent-row
+        background-color: $accent_row !important
+        font-weight: bold
+        text-align: left
+    
+    &__total-row
+        font-weight: bold
+    
+    &__total-right
+        text-align: right
+
+    &.collapse
+        p
+            transition: max-height 0.15s cubic-bezier(0,1,0,1)
+            max-height: 0
+            overflow: hidden
+        th, td
+            padding: 0
+            margin: 0
+            border: none
+
+    &--wide
+        th
+            min-width: 200px
+        td
+            min-width: 500px
+
+    &--centered
+        text-align: center
